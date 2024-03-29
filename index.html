@@ -12,31 +12,35 @@
 
 <body>
     <header class="fixed-top" id="navBar">
-        <nav class="nav mx-5 fw-semibold justify-content-around m-2">
-            <div class="col anim">
-                <h3 class="fw-bold fs-4 namaNav">Eka.</h3>
-            </div>
-            <div class="col anim text-end">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list toogle"
-                    viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                </svg>
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact</a>
+        <nav class="navbar navbar-expand-md" id="navBar">
+            <div class="container">
+                <a class="navbar-brand fs-3 text-light fw-bold" href="#about">Eka.</a>
+                <button class="navbar-toggler toggler-costum" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    </svg></span>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ms-auto">
+                            <a class="nav-link nav-costum active" aria-current="page" href="#home">Home</a>
+                            <a class="nav-link nav-costum" href="#about">About</a>
+                            <a class="nav-link nav-costum" href="#education">Education</a>
+                            <a class="nav-link nav-costum" href="#contact">Contact</a>
+                        </div>
+                    </div>
             </div>
         </nav>
     </header>
 
     <section class="row align-content-center ps-5" id="home">
-        <div class="col-12">
-            <h1 class="d-flex fs-1 anim fw-bold text-light mt-5">Hi, I'm Eka</h1>
+        <div class="col-12 d-flex justify-content-center justify-content-md-start">
+            <h1 class="fs-1 anim fw-bold text-light mt-5">Hi, I'm Eka</h1>
         </div>
-        <div class="col-12">
+        <div class="col-12 d-flex justify-content-center justify-content-md-start">
             <div class="anim">
-                <p class="fs-3 fw-bold textSecond ">Frontend Developer</p>
+                <p class="fs-3 text-center fw-bold textSecond ">Frontend Developer</p>
             </div>
         </div>
         <div class="col-md-7">
@@ -47,13 +51,13 @@
                 doloribus molestiae pariatur!
             </p>
         </div>
-        <div class="col-md-7 mb-5">
+        <div class="col-md-7 mb-5 d-flex justify-content-center justify-content-md-start">
             <div class="anim">
                 <button type="button" class="fw-bolder me-3 btnPrimer">Hire Me</button>
                 <button type="button" class="fw-bolder btnSecond">Let's Talk</button>
             </div>
         </div>
-        <div class="col-12 mt-3">
+        <div class="col-12 mt-3  d-flex justify-content-center justify-content-md-start">
             <div class="anim">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="bi bi-facebook"
                     viewBox="0 0 16 16">
@@ -74,11 +78,11 @@
         </div>
     </section>
 
-    <section class="pt-5" id="about">
-        <div class="justify-content-center d-flex">
+    <section id="about">
+        <div class="pt-5 justify-content-center d-flex">
             <h1 class="text-light fw-bold animSecond">About <span>Me</span></h1>
         </div>
-        <div class="imgAbout d-flex">
+        <div class="imgAbout d-flex justify-content-center">
             <div class="animSecond">
                 <img class="myImg" src="./img/myImg.png" alt="My Foto" />
                 <span class="rotateBorder"></span>
@@ -204,17 +208,17 @@
             </h1>
         </div>
         <div class="row">
-            <div class="col-12 mb-2 col-md-6">
+            <div class="col-12 mb-3 col-md-6">
                 <div class="d-flex justify-content-center">
-                    <h3 class="text-center mb-4 animSecond text-light fw-bold">
+                    <h3 class="text-center mb-3 animSecond text-light fw-bold">
                         Send me a message
                     </h3>
                 </div>
                 <div class="animSecond text-center">
-                    <form action="">
+                    <form id="form">
                         <input class="p-2 inputCon mb-3" type="text" id="name" placeholder="Your Name" />
                         <input class="p-2 inputCon mb-3" type="email" id="email" placeholder="Your Email" />
-                        <textarea class="p-2 inputCon mb-2" id="textArea" rows="2" placeholder="Your Message"></textarea>
+                        <textarea class="p-2 inputCon mb-2" id="message" rows="2" placeholder="Your Message"></textarea>
                         <div class="d-flex justify-content-center">
                             <div class="animSecond">
                                 <button class="btnPrimer fw-bolder" type="submit">
@@ -227,30 +231,33 @@
             </div>
             <div class="col-12 col-md-6">
                 <div class="d-flex justify-content-center">
-                    <h3 class="mb-4 animSecond text-light fw-bold">
+                    <h3 class="mb-3 animSecond text-light fw-bold">
                         Contact Information
                     </h3>
                 </div>
-                <div class="mx-5 animSecond">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00A2E7"
-                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
-                    </svg>
-                    <span class="text-white ps-2">+62 8232-9426-612</span>
-                    <br />
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00A2E7"
-                        class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-                    </svg>
-                    <span class="text-white ps-2">ekasyafrinonazhifan@gmail.com</span>
-                    <br />
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00A2E7"
-                        class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                    </svg>
-                    <span class="text-white ps-2">123 Sreet, City, Country</span>
+                <div class="information mx-5">
+                    <div class="animSecond">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00A2E7"
+                            class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                        </svg>
+                        <span class="text-white ps-2">+62 8232-9426-612</span>
+                        <br />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00A2E7"
+                            class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                        </svg>
+                        <span class="text-white ps-2">ekasyafrinonazhifan@gmail.com</span>
+                        <br />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00A2E7"
+                            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                        </svg>
+                        <span class="text-white ps-2">123 Sreet, City, Country</span>
+                    </div>
                 </div>
             </div>
         </div>

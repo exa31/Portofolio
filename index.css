@@ -12,20 +12,6 @@ body    {
     --bs-gutter-x: 0;
 }
 
-a   {
-    text-decoration: none;
-    color: white;
-    transition: .2s;
-    -webkit-transition: .2s;
-    -moz-transition: .2s;
-    -ms-transition: .2s;
-    -o-transition: .2s;
-}
-
-#navBar.row    {
-    --bs-gutter-x: none;
-}
-
 nav.row > *    {
     padding: 0;
     width: 100vw;
@@ -34,28 +20,31 @@ nav.row > *    {
 
 #navBar {
     background-color: transparent;
-    height: 3rem;
-    width: 100vw;
 }
 
-.namaNav   {
-    color: white;
-    display: flex;
-    position: relative;
-    z-index: -1;
+.navbar {
+    --bs-navbar-padding-y: 0;
 }
 
-#navBar a   {
+.toggler-costum {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.navbar-toggler-icon {
+    background-image: \F479;
+}
+
+.nav-costum   {
     margin: 0 .5rem; 
+    color: white;
+    font-weight: 700 ;
 }
 
-#navBar a:hover,
-#navBar a.active    {
-    color: #00A2E7;
-}
-
-.toogle {
-    display: none;
+.nav-costum:hover,
+.nav-costum.active    {
+    color: #00A2E7!important;
 }
 
 #home   {
@@ -250,7 +239,6 @@ span    {
     max-height: 11rem;
     border: .2rem solid #00A2E7 ;
     border-radius: 50%;
-    margin: auto;
     filter:grayscale(50%);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -495,21 +483,10 @@ span    {
 
     #home   {
         background-image: none;
+        display: flex;
         justify-content: center;
         text-align: center;
-        padding: 5px !important;
-    }
-
-    header  {
-        display: none;
-    }
-
-    #about h1   {
-        font-size: large;
-    }
-
-    #about h4   {
-        font-size: medium;
+        padding: .5rem!important;
     }
 
     #about p    {
@@ -541,6 +518,11 @@ span    {
 
     textarea.inputCon    {
         height: 4rem !important;
+    }
+
+    .information {
+        display: flex;
+        justify-content: center;
     }
 
 }

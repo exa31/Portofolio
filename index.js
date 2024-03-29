@@ -12,7 +12,11 @@ $(window).on('scroll', function () {
     //agar pada saat scrolling tidak membuat hover tampil secara tidak benar
     $(this).css("cursor", "none")
 
+    const windowWidth = $(window).width();
+
     if (currentScroll > 0)    {
+        $('#navBar').css('backgroundColor', '#081B29')
+    } else if(windowWidth < 768)    {
         $('#navBar').css('backgroundColor', '#081B29')
     } else  {
         $('#navBar').css('backgroundColor', 'transparent')
@@ -36,3 +40,26 @@ $(window).on('scroll', function () {
         }
     });
 });
+
+const nama = $("#name");
+const email = $("#email");
+const message = $("#message");
+
+$('button[type="submit"]').click(function (e) {
+    e.preventDefault();
+
+    if  (!$(nama).val())    {
+        alert("Name is required")
+    } else if  (!$(email).val())    {
+        alert("Email is required")
+    } else if   ($(email).val().indexOf("@") === -1) {
+        alert("@ is required")
+    } else if  (!$(message).val())    {
+        alert("Message is required")
+    } else  {
+        alert('Submitted')
+        $(nama).val("")
+        $(email).val("")
+        $(message).val("")
+    }
+})
